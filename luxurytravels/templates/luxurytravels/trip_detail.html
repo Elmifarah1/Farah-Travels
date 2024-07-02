@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}{{ trip.name }} - Farah Travels{% endblock %}
+{% block content %}
+<div class="main-content">
+    <h2>{{ trip.name }}</h2>
+    <p>Destination: {{ trip.destination }}</p>
+    <p>Dates: {{ trip.start_date }} to {{ trip.end_date }}</p>
+    <h3>Tasks</h3>
+    <a href="{% url 'create_task' trip.pk %}">Add Task</a>
+    <ul>
+        {% for task in trip.tasks.all %}
+        <li>{{ task.name }} - {{ task.priority }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

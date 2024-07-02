@@ -1,0 +1,28 @@
+/* base.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.navbar-nav a {
+    color: white !important;
+}
+
+.navbar-nav .nav-item.active a {
+    color: #ff6600 !important;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff6600 !important;
+}
+
+.footer {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

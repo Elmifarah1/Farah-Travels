@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'luxurytravels',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -62,15 +63,19 @@ MIDDLEWARE = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'landing'
 
 ROOT_URLCONF = 'farah_travels.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'luxurytravels/templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Trips - Farah Travels{% endblock %}
+{% block content %}
+<div class="main-content">
+    <h2>Your Trips</h2>
+    <a href="{% url 'create_trip' %}">Create New Trip</a>
+    <ul>
+        {% for trip in trips %}
+        <li><a href="{% url 'trip_detail' trip.pk %}">{{ trip.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

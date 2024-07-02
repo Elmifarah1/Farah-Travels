@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Farah Travels{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Upcoming Tasks and Trips</h2>
+    <ul class="list-group">
+        {% for notification in notifications %}
+        <li class="list-group-item">{{ notification.message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
