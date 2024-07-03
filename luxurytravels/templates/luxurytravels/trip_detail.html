@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
-{% block title %}{{ trip.name }} - Farah Travels{% endblock %}
+
 {% block content %}
-<div class="main-content">
-    <h2>{{ trip.name }}</h2>
-    <p>Destination: {{ trip.destination }}</p>
-    <p>Dates: {{ trip.start_date }} to {{ trip.end_date }}</p>
-    <h3>Tasks</h3>
-    <a href="{% url 'create_task' trip.pk %}">Add Task</a>
-    <ul>
-        {% for task in trip.tasks.all %}
-        <li>{{ task.name }} - {{ task.priority }}</li>
-        {% endfor %}
-    </ul>
-</div>
+  <h1>{{ trip.name }}</h1>
+  <p><strong>Destination:</strong> {{ trip.destination }}</p>
+  <p><strong>Travel Date:</strong> {{ trip.travel_date }}</p>
+  <p><strong>Return Date:</strong> {{ trip.return_date }}</p>
+  <p><strong>Number of People:</strong> {{ trip.num_people }}</p>
+  <p><strong>Departure Airport:</strong> {{ trip.departure_airport }}</p>
+  <p><strong>Description:</strong> {{ trip.description }}</p>
+
+  <h2>Tasks</h2>
+  <ul>
+    {% for task in tasks %}
+      <li>{{ task.name }} - {{ task.completed|yesno:"Completed,Not completed" }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'create_task' trip.id %}" class="btn btn-primary">Add Task</a>
+  <a href="{% url 'update_trip' trip.id %}" class="btn btn-secondary">Edit Trip</a>
+  <form method="post" action="{% url 'delete_trip' trip.id %}" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete Trip</button>
+  </form>
 {% endblock %}

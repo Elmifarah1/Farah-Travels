@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
-{% block title %}Create Trip - Farah Travels{% endblock %}
+
 {% block content %}
-<div class="main-content">
-    <h2>Create New Trip</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
-</div>
+  <h1>{% if form.instance.pk %}Update{% else %}Create{% endif %} Trip</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">{% if form.instance.pk %}Update{% else %}Create{% endif %}</button>
+  </form>
 {% endblock %}

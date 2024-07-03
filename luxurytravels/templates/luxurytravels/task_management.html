@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Task Management</h1>
+  <ul>
+    {% for task in tasks %}
+      <li>{{ task.name }} - {{ task.description }} - {{ task.completed|yesno:"Completed,Not completed" }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

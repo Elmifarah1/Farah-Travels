@@ -6,9 +6,9 @@ from .models import Trip, Task
 class TripForm(forms.ModelForm):
     class Meta:
         model = Trip
-        fields = ['name', 'destination', 'start_date', 'end_date', 'collaborators']
+        fields = ['name', 'destination', 'travel_date', 'return_date', 'num_people', 'departure_airport', 'description']
 
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ['name', 'description', 'due_date', 'priority', 'assigned_to']
+        fields = ['name', 'description', 'completed']
