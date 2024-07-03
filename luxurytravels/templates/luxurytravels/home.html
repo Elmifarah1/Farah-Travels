@@ -3,12 +3,26 @@
 {% block title %}Home - Farah Travels{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
+<div class="home-page container mt-4">
     <h2>Upcoming Tasks and Trips</h2>
-    <ul class="list-group">
+    <ul class="list-group mb-4">
         {% for notification in notifications %}
         <li class="list-group-item">{{ notification.message }}</li>
         {% endfor %}
     </ul>
+
+    <div class="row">
+        {% for i in 1..6 %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Location {{ i }}</h5>
+                    <p class="card-text">Add details for your trip to Location {{ i }}.</p>
+                    <a href="{% url 'create_trip' %}" class="btn btn-primary">Create Trip</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

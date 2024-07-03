@@ -1,15 +1,46 @@
-{% extends 'base.html' %}
-
-{% block title %}Sign Up{% endblock %}
-
-{% block content %}
-<div class="container mt-5">
-    <h2>Sign Up</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-    </form>
-    <p>Already have an account? <a href="{% url 'login' %}">Log In</a></p>
-</div>
-{% endblock %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Farah Travels</title>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <div class="logo">
+        <img src="{% static 'images/FT-Logo.png' %}" alt="Logo">
+    </div>
+    <div class="signup-container">
+        <h1 class="text-center">{% trans "Sign Up" %}</h1>
+        <form method="post" action="{% url 'account_signup' %}">
+            {% csrf_token %}
+            <div class="form-group mb-3">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div class="form-group mb-3">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+            <div class="form-group mb-3">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+            </div>
+            <div class="form-group mb-3">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+            </div>
+            <button type="submit" class="btn btn-primary w-100">{% trans "Sign Up" %}</button>
+        </form>
+        <p class="text-center mt-3">
+            <a href="{% url 'account_login' %}">{% trans "Already have an account? Log In" %}</a>
+        </p>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
