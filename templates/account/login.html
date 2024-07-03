@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,41 +7,39 @@
     <title>Login | Farah Travels</title>
     {% load static %}
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="{% url 'home' %}">Farah Travels</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container mt-4">
-        <h1>Login</h1>
+    <div class="logo">
+        <img src="{% static 'images/FT-Logo.png' %}" alt="Logo">
+    </div>
+    <div class="login-container">
+        <h1 class="text-center">{% trans "Sign In" %}</h1>
         <form method="post" action="{% url 'account_login' %}">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Sign In</button>
+            <div class="form-group mb-3">
+                {{ form.login.label_tag }}
+                {{ form.login }}
+            </div>
+            <div class="form-group mb-3">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+            <div class="form-group mb-3 form-check">
+                {{ form.remember.label_tag }}
+                {{ form.remember }}
+            </div>
+            <button class="btn btn-primary w-100" type="submit">{% trans "Sign In" %}</button>
+            <p class="text-center mt-3">
+                <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+            </p>
+            <p class="text-center">
+                <a href="{% url 'account_signup' %}">{% trans "Don't have an account? Sign Up" %}</a>
+            </p>
         </form>
     </div>
-
-    <footer class="footer">
-        <p>&copy; 2024 Farah Travels. All rights reserved.</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
