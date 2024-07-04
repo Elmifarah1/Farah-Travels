@@ -9,26 +9,26 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #003366;">
         <a class="navbar-brand" href="{% url 'home' %}">Farah Travels</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'create_trip' %}">Create Trip</a>
+                    <a class="nav-link" href="{% url 'create_trip' %}">Create Trips</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'trip_list' %}">Trips</a>
                 </li>
                 <li class="nav-item">
-                    <form method="POST" action="{% url 'account_logout' %}">
+                    <form method="POST" action="{% url 'account_logout' %}" class="form-inline" style="display: inline;">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-link nav-link">Logout</button>
+                        <button type="submit" class="btn btn-link nav-link p-0" style="height: 100%; padding: 0.5rem 1rem; color: #fff;">Logout</button>
                     </form>
                 </li>
             </ul>
@@ -44,7 +44,7 @@
         {% endblock %}
     </div>
 
-    <footer class="footer bg-primary text-white text-center py-3">
+    <footer class="footer text-white text-center py-3" style="background-color: #003366;">
         <p>&copy; 2024 Farah Travels. All rights reserved.</p>
     </footer>
 
