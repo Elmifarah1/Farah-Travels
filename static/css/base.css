@@ -54,3 +54,43 @@ body {
 .card-text {
     color: #555;
 }
+
+/* My Trip Page Styles */
+.card {
+    border-radius: 15px;
+}
+
+.card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #003366; 
+    color: white;
+}
+
+.card-body {
+    padding: 20px 30px; 
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-top: 10px; 
+}
+
+.form-control {
+    border-radius: 10px; 
+}
+
+.btn-primary {
+    background-color: #003366;
+    border-color: #003366;
+    font-size: 1.2rem; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+}
+
+.btn-primary:hover {
+    background-color: #002244;
+    border-color: #002244;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');

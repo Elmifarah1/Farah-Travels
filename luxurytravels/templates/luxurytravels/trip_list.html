@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
+
 {% block title %}Trips - Farah Travels{% endblock %}
+
 {% block content %}
-<div class="main-content">
+<div class="container mt-4">
     <h2>Your Trips</h2>
-    <a href="{% url 'create_trip' %}">Create New Trip</a>
-    <ul>
+    <a href="{% url 'create_trip' %}" class="btn btn-primary mb-3">Create New Trip</a>
+    <ul class="list-group">
         {% for trip in trips %}
-        <li><a href="{% url 'trip_detail' trip.pk %}">{{ trip.name }}</a></li>
+        <li class="list-group-item">
+            <a href="{% url 'trip_detail' trip.pk %}">{{ trip.name }} to {{ trip.destination }}</a>
+            <form method="post" action="{% url 'delete_trip' trip.pk %}" class="d-inline-block float-right ml-2">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+            <a href="{% url 'update_trip' trip.pk %}" class="btn btn-secondary btn-sm float-right">Update</a>
+        </li>
         {% endfor %}
     </ul>
 </div>
