@@ -20,18 +20,15 @@
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'trip_list' %}">Trips</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{% url 'create_trip' %}">Create Trip</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'task_management' %}">Task Management</a>
+                    <a class="nav-link" href="{% url 'trip_list' %}">Trips</a>
                 </li>
                 <li class="nav-item">
                     <form method="POST" action="{% url 'account_logout' %}">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-link nav-link" style="display: inline; padding: 0; border: none; background: none; cursor: pointer;">Logout</button>
+                        <button type="submit" class="btn btn-link nav-link">Logout</button>
                     </form>
                 </li>
             </ul>

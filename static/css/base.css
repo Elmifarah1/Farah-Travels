@@ -1,24 +1,21 @@
-/* General styles */
+/* Base styles */
 body {
-    background-color: #f8f9fa; /* Light grey background for the entire page */
+    background-color: #f0f0f0; 
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Navbar styles */
 .navbar {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Container styles */
 .container {
     margin-top: 40px;
 }
 
-/* Footer styles */
 .footer {
-    background-color: #007bff; /* Primary color matching the navbar */
+    background-color: #007bff; 
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -27,7 +24,6 @@ body {
     bottom: 0;
 }
 
-/* Form styles */
 .form-inline .form-control {
     border-radius: 5px;
 }
@@ -36,7 +32,6 @@ body {
     border-radius: 5px;
 }
 
-/* Button styles */
 .btn-link {
     color: white;
 }
@@ -45,7 +40,6 @@ body {
     color: #dcdcdc;
 }
 
-/* Additional styling for content */
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: none;
@@ -59,45 +53,4 @@ body {
 
 .card-text {
     color: #555;
-}
-
-
-/* Home page specific styles */
-.home-page {
-    background-color: #f0f0f0; /* Light grey background for the entire page */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.home-page .container h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Card styles specific to home page */
-.home-page .card {
-    background-color: rgba(173, 216, 230, 0.5); /* Light blue with transparency */
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.home-page .card-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-}
-
-.home-page .card-text {
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.home-page .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    padding: 10px 20px;
-    font-size: 16px;
-    width: 100%;
 }
