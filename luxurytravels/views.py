@@ -1,17 +1,18 @@
+# luxurytravels/views.py
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Trip
 from .forms import TripForm
 from django.db.models import Q
+from django.contrib import messages
 
 @login_required
 def home(request):
-    notifications = request.user.notifications.filter(read=False)
-    return render(request, 'luxurytravels/home.html', {'notifications': notifications})
+    return render(request, 'luxurytravels/home.html')
 
 @login_required
 def trip_list(request):
-    trips = request.user.trips.all()
+    trips = Trip.objects.filter(owner=request.user)
     return render(request, 'luxurytravels/trip_list.html', {'trips': trips})
 
 @login_required
@@ -27,6 +28,7 @@ def create_trip(request):
             trip = form.save(commit=False)
             trip.owner = request.user
             trip.save()
+            messages.success(request, 'Trip created successfully!')
             return redirect('trip_list')
     else:
         form = TripForm()
@@ -39,6 +41,7 @@ def update_trip(request, pk):
         form = TripForm(request.POST, instance=trip)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Trip updated successfully!')
             return redirect('trip_detail', pk=trip.pk)
     else:
         form = TripForm(instance=trip)
@@ -49,6 +52,7 @@ def delete_trip(request, pk):
     trip = get_object_or_404(Trip, pk=pk, owner=request.user)
     if request.method == 'POST':
         trip.delete()
+        messages.success(request, 'Trip deleted successfully!')
         return redirect('trip_list')
     return render(request, 'luxurytravels/delete_trip.html', {'trip': trip})
 

@@ -1,4 +1,4 @@
-/* My Base styles */
+/* MyBase styles */
 body {
     background-color: #f0f0f0; 
     font-family: 'Arial', sans-serif;
@@ -19,7 +19,6 @@ body {
     color: white;
     padding: 20px 0;
     text-align: center;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
