@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Trip
 from .forms import TripForm
+from django.db.models import Q
 
 @login_required
 def home(request):
@@ -54,5 +55,8 @@ def delete_trip(request, pk):
 @login_required
 def search_trips(request):
     query = request.GET.get('q')
-    trips = Trip.objects.filter(name__icontains=query, owner=request.user)
-    return render(request, 'luxurytravels/trip_list.html', {'trips': trips, 'query': query})
+    if query:
+        trips = Trip.objects.filter(Q(destination__icontains=query) | Q(name__icontains=query))
+    else:
+        trips = Trip.objects.none()
+    return render(request, 'luxurytravels/trip_list.html', {'trips': trips})
