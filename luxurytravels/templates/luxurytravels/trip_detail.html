@@ -1,24 +1,40 @@
 {% extends 'base.html' %}
 
+{% block title %}Trip Details - Farah Travels{% endblock %}
+
 {% block content %}
-  <h1>{{ trip.name }}</h1>
-  <p><strong>Destination:</strong> {{ trip.destination }}</p>
-  <p><strong>Travel Date:</strong> {{ trip.travel_date }}</p>
-  <p><strong>Return Date:</strong> {{ trip.return_date }}</p>
-  <p><strong>Number of People:</strong> {{ trip.num_people }}</p>
-  <p><strong>Departure Airport:</strong> {{ trip.departure_airport }}</p>
-  <p><strong>Description:</strong> {{ trip.description }}</p>
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">{{ trip.name }}</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Destination:</strong> {{ trip.destination }}</p>
+            <p><strong>Travel Date:</strong> {{ trip.travel_date }}</p>
+            <p><strong>Return Date:</strong> {{ trip.return_date }}</p>
+            <p><strong>Number of People:</strong> {{ trip.num_people }}</p>
+            <p><strong>Departure Airport:</strong> {{ trip.departure_airport }}</p>
+            <p><strong>Description:</strong> {{ trip.description }}</p>
 
-  <h2>Tasks</h2>
-  <ul>
-    {% for task in trip.tasks.all %}
-      <li>{{ task.name }} - {{ task.completed|yesno:"Completed,Not completed" }}</li>
-    {% endfor %}
-  </ul>
+            <h3>Tasks</h3>
+            <ul class="list-group mb-3">
+                {% for task in tasks %}
+                <li class="list-group-item">{{ task.name }} - {{ task.completed|yesno:"Completed,Not completed" }}</li>
+                {% endfor %}
+            </ul>
 
-  <a href="{% url 'update_trip' trip.id %}" class="btn btn-secondary">Edit Trip</a>
-  <form method="post" action="{% url 'delete_trip' trip.id %}" style="display:inline;">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Delete Trip</button>
-  </form>
+            <a href="{% url 'create_task' trip.id %}" class="btn btn-primary mb-3">Add Task</a>
+
+            <div class="d-flex justify-content-between">
+                <a href="{% url 'update_trip' trip.id %}" class="btn btn-secondary">Edit Trip</a>
+                <form method="post" action="{% url 'delete_trip' trip.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete Trip</button>
+                </form>
+            </div>
+
+            <a href="{% url 'trip_list' %}" class="btn btn-info mt-3">Back to Trip List</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
