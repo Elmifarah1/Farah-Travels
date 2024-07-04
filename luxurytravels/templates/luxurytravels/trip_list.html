@@ -4,19 +4,36 @@
 
 {% block content %}
 <div class="container mt-4">
-    <h2>Your Trips</h2>
-    <a href="{% url 'create_trip' %}" class="btn btn-primary mb-3">Create New Trip</a>
-    <ul class="list-group">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Your Trips</h2>
+        <a href="{% url 'create_trip' %}" class="btn btn-primary">Create New Trip</a>
+    </div>
+    <div class="row">
         {% for trip in trips %}
-        <li class="list-group-item">
-            <a href="{% url 'trip_detail' trip.pk %}">{{ trip.name }} to {{ trip.destination }}</a>
-            <form method="post" action="{% url 'delete_trip' trip.pk %}" class="d-inline-block float-right ml-2">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-            </form>
-            <a href="{% url 'update_trip' trip.pk %}" class="btn btn-secondary btn-sm float-right">Update</a>
-        </li>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ trip.name }}</h5>
+                    <p class="card-text">
+                        <strong>Destination:</strong> {{ trip.destination }}<br>
+                        <strong>Travel Date:</strong> {{ trip.travel_date }}<br>
+                        <strong>Return Date:</strong> {{ trip.return_date }}<br>
+                        <strong>People:</strong> {{ trip.num_people }}<br>
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'trip_detail' trip.pk %}" class="btn btn-info btn-sm">View Details</a>
+                        <div>
+                            <a href="{% url 'update_trip' trip.pk %}" class="btn btn-secondary btn-sm">Update</a>
+                            <form method="post" action="{% url 'delete_trip' trip.pk %}" class="d-inline-block">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 </div>
 {% endblock %}
