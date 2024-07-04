@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'luxurytravels',
     'accounts',
     'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -161,3 +162,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
     'https://8000-elmifarah1-farahtravels-auvw5m7oiuu.ws.codeinstitute-ide.net',  # Add this line
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
