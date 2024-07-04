@@ -3,26 +3,58 @@
 {% block title %}Home - Farah Travels{% endblock %}
 
 {% block content %}
-<div class="home-page container mt-4">
-    <h2>Upcoming Tasks and Trips</h2>
-    <ul class="list-group mb-4">
-        {% for notification in notifications %}
-        <li class="list-group-item">{{ notification.message }}</li>
-        {% endfor %}
-    </ul>
+{% load static %}
 
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Discover Our Trip Ideas At Farah Travels</h2>
     <div class="row">
-        {% for i in 1..6 %}
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Location {{ i }}</h5>
-                    <p class="card-text">Add details for your trip to Location {{ i }}.</p>
-                    <a href="{% url 'create_trip' %}" class="btn btn-primary">Create Trip</a>
-                </div>
+        <div class="col-md-4">
+            <div class="trip-idea-box">
+                <h3>Beach Getaway</h3>
+                <p>Relax and unwind on a beautiful beach.</p>
+                <a href="{% url 'create_trip' %}" class="btn btn-primary">Create Trip</a>
             </div>
         </div>
-        {% endfor %}
+        <div class="col-md-4">
+            <div class="trip-idea-box">
+                <h3>Mountain Adventure</h3>
+                <p>Explore the great outdoors with a mountain adventure.</p>
+                <a href="{% url 'create_trip' %}" class="btn btn-primary">Create Trip</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="trip-idea-box">
+                <h3>City Break</h3>
+                <p>Discover the excitement of a new city.</p>
+                <a href="{% url 'create_trip' %}" class="btn btn-primary">Create Trip</a>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="trip-idea-box">
+                <h3>Cultural Experience</h3>
+                <p>Immerse yourself in a different culture.</p>
+                <a href="{% url 'create_trip' %}" class="btn btn-primary">Create Trip</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="trip-idea-box">
+                <h3>Wildlife Safari</h3>
+                <p>Experience the thrill of a wildlife safari.</p>
+                <a href="{% url 'create_trip' %}" class="btn btn-primary">Create Trip</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="trip-idea-box">
+                <h3>Luxury Cruise</h3>
+                <p>Enjoy the luxury of a cruise vacation.</p>
+                <a href="{% url 'create_trip' %}" class="btn btn-primary">Create Trip</a>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
