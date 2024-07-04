@@ -30,10 +30,7 @@
                         <a class="nav-link" href="{% url 'trip_list' %}">Trips</a>
                     </li>
                     <li class="nav-item">
-                        <form method="POST" action="{% url 'account_logout' %}" class="d-inline">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-link nav-link p-0" style="color: #fff;">Logout</button>
-                        </form>
+                        <button type="button" class="btn btn-link nav-link p-0" style="color: #fff;" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</button>
                     </li>
                     <li class="nav-item">
                         <form class="d-flex" action="{% url 'search_trips' %}" method="get">
@@ -54,6 +51,27 @@
     <footer class="footer text-white text-center py-3" style="background-color: #003366;">
         <p>&copy; 2024 Farah Travels. All rights reserved.</p>
     </footer>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to log out?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <form method="POST" action="{% url 'account_logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Yes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
