@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block title %}Create Trip{% endblock %}
 
 {% block content %}
@@ -11,40 +13,10 @@
         <div class="card-body">
             <form method="post">
                 {% csrf_token %}
-                <div class="form-group">
-                    {{ form.name.label_tag }}
-                    {{ form.name }}
-                </div>
-                <div class="form-group">
-                    {{ form.destination.label_tag }}
-                    {{ form.destination }}
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        {{ form.travel_date.label_tag }}
-                        {{ form.travel_date }}
-                    </div>
-                    <div class="form-group col-md-6">
-                        {{ form.return_date.label_tag }}
-                        {{ form.return_date }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    {{ form.num_people.label_tag }}
-                    {{ form.num_people }}
-                </div>
-                <div class="form-group">
-                    {{ form.departure_airport.label_tag }}
-                    {{ form.departure_airport }}
-                </div>
-                <div class="form-group">
-                    {{ form.description.label_tag }}
-                    {{ form.description }}
-                </div>
+                {{ form|crispy }}
                 <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i> Create</button>
             </form>
         </div>
     </div>
 </div>
 {% endblock %}
-
