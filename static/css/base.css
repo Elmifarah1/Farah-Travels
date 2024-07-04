@@ -15,7 +15,7 @@ body {
 }
 
 .footer {
-    background-color: #007bff; 
+    background-color: #003366; 
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -54,6 +54,13 @@ body {
 .card-text {
     color: #555;
 }
+
+/* Specific styles for navbar items */
+.navbar .nav-item {
+    margin-right: 20px;
+}
+
+
 
 /* My Trip Page Styles */
 .card {
