@@ -38,7 +38,7 @@ def update_trip(request, pk):
         form = TripForm(request.POST, instance=trip)
         if form.is_valid():
             form.save()
-            return redirect('trip_list')
+            return redirect('trip_detail', pk=trip.pk)
     else:
         form = TripForm(instance=trip)
     return render(request, 'luxurytravels/update_trip.html', {'form': form})
