@@ -22,9 +22,7 @@
                 <li class="list-group-item">{{ task.name }} - {{ task.completed|yesno:"Completed,Not completed" }}</li>
                 {% endfor %}
             </ul>
-
-            <a href="{% url 'create_task' trip.id %}" class="btn btn-primary mb-3">Add Task</a>
-
+            
             <div class="d-flex justify-content-between">
                 <a href="{% url 'update_trip' trip.id %}" class="btn btn-secondary">Edit Trip</a>
                 <form method="post" action="{% url 'delete_trip' trip.id %}" style="display:inline;">
