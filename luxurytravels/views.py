@@ -65,6 +65,10 @@ def search_trips(request):
         trips = Trip.objects.none()
     return render(request, 'luxurytravels/trip_list.html', {'trips': trips})
 
+@login_required
+def profile_detail_view(request):
+    profile = get_object_or_404(Profile, user=request.user)
+    return render(request, 'luxurytravels/profile_detail.html', {'profile': profile})
 
 @login_required
 def profile_view(request):
@@ -74,7 +78,7 @@ def profile_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully!')
-            return redirect('profile_view')
+            return redirect('profile_detail')  # Redirect to profile detail page
     else:
         form = ProfileForm(instance=profile)
     return render(request, 'luxurytravels/profile.html', {'form': form})
