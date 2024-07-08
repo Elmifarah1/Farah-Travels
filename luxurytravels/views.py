@@ -1,8 +1,8 @@
 # luxurytravels/views.py
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Trip
-from .forms import TripForm
+from .models import Trip, Profile
+from .forms import TripForm, ProfileForm
 from django.db.models import Q
 from django.contrib import messages
 
