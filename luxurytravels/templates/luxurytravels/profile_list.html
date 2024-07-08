@@ -1,36 +1,41 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}Profiles - Farah Travels{% endblock %}
+{% block title %}Profile - Farah Travels{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
-    <h2>User Profiles</h2>
-    <a href="{% url 'create_profile' %}" class="btn btn-primary mb-3">Create New Profile</a>
+    <h2>User Profile</h2>
     <div class="row">
-        {% for profile in profiles %}
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">{{ profile.user.username }}</h5>
-                    <p class="card-text"><strong>Address:</strong> {{ profile.address }}</p>
-                    <p class="card-text"><strong>Date of Birth:</strong> {{ profile.dob }}</p>
-                    <p class="card-text"><strong>Phone:</strong> {{ profile.phone }}</p>
-                    <p class="card-text"><strong>Passport Number:</strong> {{ profile.passport_number }}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="{% url 'profile_detail' profile.pk %}" class="btn btn-sm btn-outline-secondary">View</a>
-                            <a href="{% url 'update_profile' profile.pk %}" class="btn btn-sm btn-outline-secondary">Edit</a>
+        {% if profile %}
+            <div class="col-md-6 offset-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ profile.user.username }}</h5>
+                        <p class="card-text"><strong>Full Name:</strong> {{ profile.full_name }}</p>
+                        <p class="card-text"><strong>Address:</strong> {{ profile.address }}</p>
+                        <p class="card-text"><strong>Date of Birth:</strong> {{ profile.dob }}</p>
+                        <p class="card-text"><strong>Phone:</strong> {{ profile.phone }}</p>
+                        <p class="card-text"><strong>Passport Number:</strong> {{ profile.passport_number }}</p>
+                        <p class="card-text"><strong>Frequent Flyer Number:</strong> {{ profile.frequent_flyer_number }}</p>
+                        <p class="card-text"><strong>Emergency Contact Name:</strong> {{ profile.emergency_contact_name }}</p>
+                        <p class="card-text"><strong>Emergency Contact Phone:</strong> {{ profile.emergency_contact_phone }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="{% url 'update_profile' profile.pk %}" class="btn btn-secondary btn-sm">Update</a>
+                            <form method="post" action="{% url 'delete_profile' profile.pk %}" class="d-inline-block">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
                         </div>
-                        <form method="post" action="{% url 'delete_profile' profile.pk %}" class="d-inline-block">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-        {% endfor %}
+        {% else %}
+            <div class="col-md-12 text-center">
+                <p>You have not created a profile yet.</p>
+                <a href="{% url 'create_profile' %}" class="btn btn-primary">Create New Profile</a>
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

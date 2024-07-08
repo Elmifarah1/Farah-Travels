@@ -67,9 +67,11 @@ def search_trips(request):
 
 @login_required
 def profile_list(request):
-    profiles = Profile.objects.all()
-    return render(request, 'luxurytravels/profile_list.html', {'profiles': profiles})
-
+    profile = Profile.objects.filter(user=request.user).first()
+    if profile:
+        return render(request, 'luxurytravels/profile_detail.html', {'profile': profile})
+    else:
+        return redirect('create_profile')
 @login_required
 def profile_detail(request, pk):
     profile = get_object_or_404(Profile, pk=pk)
@@ -77,6 +79,10 @@ def profile_detail(request, pk):
 
 @login_required
 def create_profile(request):
+    if Profile.objects.filter(user=request.user).exists():
+        messages.warning(request, 'You already have a profile.')
+        return redirect('profile_list')
+
     if request.method == 'POST':
         form = ProfileForm(request.POST)
         if form.is_valid():
@@ -88,6 +94,7 @@ def create_profile(request):
     else:
         form = ProfileForm()
     return render(request, 'luxurytravels/create_profile.html', {'form': form})
+
 
 @login_required
 def update_profile(request, pk):

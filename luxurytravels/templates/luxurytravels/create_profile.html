@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}Create Profile{% endblock %}
+{% block title %}Create Profile - Farah Travels{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
     <div class="card shadow-lg border-0">
         <div class="card-header bg-primary text-white">
-            <h2 class="mb-0"><i class="fas fa-user-plus"></i> Create Profile</h2>
+            <h2 class="mb-0">Create Profile</h2>
         </div>
         <div class="card-body">
             <form method="post">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i> Save</button>
+                <button type="submit" class="btn btn-primary btn-block">Create</button>
             </form>
         </div>
     </div>
