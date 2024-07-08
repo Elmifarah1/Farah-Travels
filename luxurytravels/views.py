@@ -64,3 +64,17 @@ def search_trips(request):
     else:
         trips = Trip.objects.none()
     return render(request, 'luxurytravels/trip_list.html', {'trips': trips})
+
+
+@login_required
+def profile_view(request):
+    profile, created = Profile.objects.get_or_create(user=request.user)
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile updated successfully!')
+            return redirect('profile_view')
+    else:
+        form = ProfileForm(instance=profile)
+    return render(request, 'luxurytravels/profile.html', {'form': form})
