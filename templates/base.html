@@ -30,6 +30,9 @@
                         <a class="nav-link" href="{% url 'trip_list' %}">Trips</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile_view' %}">Profile</a>
+                    </li>
+                    <li class="nav-item">
                         <form method="POST" action="{% url 'account_logout' %}" class="d-inline" id="logout-form">
                             {% csrf_token %}
                             <button type="submit" class="btn btn-link nav-link p-0" style="color: #fff;">Logout</button>
