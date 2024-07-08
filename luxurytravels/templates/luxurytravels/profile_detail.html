@@ -4,12 +4,17 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>Profile Details</h2>
-    <p><strong>Username:</strong> {{ profile.user.username }}</p>
-    <p><strong>Address:</strong> {{ profile.address }}</p>
-    <p><strong>DOB:</strong> {{ profile.dob }}</p>
-    <p><strong>Phone:</strong> {{ profile.phone }}</p>
-    <p><strong>Passport Number:</strong> {{ profile.passport_number }}</p>
-    <a href="{% url 'profile_list' %}" class="btn btn-primary">Back to Profiles</a>
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Profile Details</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Address:</strong> {{ profile.address }}</p>
+            <p><strong>Date of Birth:</strong> {{ profile.dob }}</p>
+            <p><strong>Phone:</strong> {{ profile.phone }}</p>
+            <p><strong>Passport Number:</strong> {{ profile.passport_number }}</p>
+            <a href="{% url 'update_profile' profile.pk %}" class="btn btn-secondary">Edit Profile</a>
+        </div>
+    </div>
 </div>
 {% endblock %}
