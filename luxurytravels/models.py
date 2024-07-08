@@ -29,3 +29,15 @@ class Notification(models.Model):
     message = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    dob = models.DateField(blank=True, null=True)
+    phone = models.CharField(max_length=15, blank=True, null=True)
+    passport_number = models.CharField(max_length=20, blank=True, null=True)
+
+    def __str__(self):
+        return self.user.username
+        
