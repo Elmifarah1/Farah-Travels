@@ -1,3 +1,4 @@
+<!-- luxurytravels/templates/luxurytravels/profile_detail.html -->
 {% extends 'base.html' %}
 
 {% block title %}Profile Details{% endblock %}
@@ -6,15 +7,26 @@
 <div class="container mt-5">
     <div class="card shadow-lg border-0">
         <div class="card-header bg-primary text-white">
-            <h2 class="mb-0">Profile Details</h2>
+            <h2 class="mb-0"><i class="fas fa-user"></i> Profile Details</h2>
         </div>
         <div class="card-body">
-            <p><strong>Full Name:</strong> {{ profile.address }}</p>
-            <p><strong>Address:</strong> {{ profile.address }}</p>
-            <p><strong>Date of Birth:</strong> {{ profile.dob }}</p>
-            <p><strong>Phone:</strong> {{ profile.phone }}</p>
-            <p><strong>Passport Number:</strong> {{ profile.passport_number }}</p>
-            <a href="{% url 'update_profile' profile.pk %}" class="btn btn-secondary">Edit Profile</a>
+            <div class="row mb-3">
+                <div class="col-md-6"><strong>Full Name:</strong> {{ profile.full_name }}</div>
+                <div class="col-md-6"><strong>Address:</strong> {{ profile.address }}</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6"><strong>Date of Birth:</strong> {{ profile.dob }}</div>
+                <div class="col-md-6"><strong>Phone:</strong> {{ profile.phone }}</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6"><strong>Passport Number:</strong> {{ profile.passport_number }}</div>
+                <div class="col-md-6"><strong>Frequent Flyer Number:</strong> {{ profile.frequent_flyer_number }}</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6"><strong>Emergency Contact Name:</strong> {{ profile.emergency_contact_name }}</div>
+                <div class="col-md-6"><strong>Emergency Contact Phone:</strong> {{ profile.emergency_contact_phone }}</div>
+            </div>
+            <a href="{% url 'update_profile' profile.pk %}" class="btn btn-secondary btn-block"><i class="fas fa-edit"></i> Edit Profile</a>
         </div>
     </div>
 </div>
