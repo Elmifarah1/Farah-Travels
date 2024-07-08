@@ -30,13 +30,16 @@ class Notification(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
 
-
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    address = models.CharField(max_length=255, blank=True)
-    dob = models.DateField(null=True, blank=True)
-    phone = models.CharField(max_length=15, blank=True)
-    passport_number = models.CharField(max_length=50, blank=True)
+    full_name = models.CharField(max_length=100)
+    address = models.CharField(max_length=255)
+    dob = models.DateField()
+    phone = models.CharField(max_length=15)
+    passport_number = models.CharField(max_length=50)
+    frequent_flyer_number = models.CharField(max_length=50, blank=True, null=True)
+    emergency_contact_name = models.CharField(max_length=100, blank=True, null=True)
+    emergency_contact_phone = models.CharField(max_length=15, blank=True, null=True)
 
     def __str__(self):
         return self.user.username

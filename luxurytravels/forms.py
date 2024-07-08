@@ -16,4 +16,7 @@ class TaskForm(forms.ModelForm):
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['address', 'dob', 'phone', 'passport_number']
+        fields = ['full_name', 'address', 'dob', 'phone', 'passport_number', 'frequent_flyer_number', 'emergency_contact_name', 'emergency_contact_phone']
+        widgets = {
+            'dob': forms.DateInput(attrs={'type': 'date'}),
+        }
