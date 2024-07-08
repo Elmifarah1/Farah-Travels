@@ -72,6 +72,7 @@ def profile_list(request):
         return render(request, 'luxurytravels/profile_detail.html', {'profile': profile})
     else:
         return redirect('create_profile')
+
 @login_required
 def profile_detail(request, pk):
     profile = get_object_or_404(Profile, pk=pk)
