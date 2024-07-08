@@ -66,19 +66,47 @@ def search_trips(request):
     return render(request, 'luxurytravels/trip_list.html', {'trips': trips})
 
 @login_required
-def profile_detail_view(request):
-    profile = get_object_or_404(Profile, user=request.user)
+def profile_list(request):
+    profiles = Profile.objects.all()
+    return render(request, 'luxurytravels/profile_list.html', {'profiles': profiles})
+
+@login_required
+def profile_detail(request, pk):
+    profile = get_object_or_404(Profile, pk=pk)
     return render(request, 'luxurytravels/profile_detail.html', {'profile': profile})
 
 @login_required
-def profile_view(request):
-    profile, created = Profile.objects.get_or_create(user=request.user)
+def create_profile(request):
+    if request.method == 'POST':
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.user = request.user
+            profile.save()
+            messages.success(request, 'Profile created successfully!')
+            return redirect('profile_list')
+    else:
+        form = ProfileForm()
+    return render(request, 'luxurytravels/create_profile.html', {'form': form})
+
+@login_required
+def update_profile(request, pk):
+    profile = get_object_or_404(Profile, pk=pk)
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully!')
-            return redirect('profile_detail')  # Redirect to profile detail page
+            return redirect('profile_detail', pk=profile.pk)
     else:
         form = ProfileForm(instance=profile)
-    return render(request, 'luxurytravels/profile.html', {'form': form})
+    return render(request, 'luxurytravels/update_profile.html', {'form': form})
+
+@login_required
+def delete_profile(request, pk):
+    profile = get_object_or_404(Profile, pk=pk)
+    if request.method == 'POST':
+        profile.delete()
+        messages.success(request, 'Profile deleted successfully!')
+        return redirect('profile_list')
+    return render(request, 'luxurytravels/delete_profile.html', {'profile': profile})

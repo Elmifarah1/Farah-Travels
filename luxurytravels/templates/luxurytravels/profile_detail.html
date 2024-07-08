@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile Details{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Profile Details</h2>
+    <p><strong>Username:</strong> {{ profile.user.username }}</p>
+    <p><strong>Address:</strong> {{ profile.address }}</p>
+    <p><strong>DOB:</strong> {{ profile.dob }}</p>
+    <p><strong>Phone:</strong> {{ profile.phone }}</p>
+    <p><strong>Passport Number:</strong> {{ profile.passport_number }}</p>
+    <a href="{% url 'profile_list' %}" class="btn btn-primary">Back to Profiles</a>
+</div>
+{% endblock %}

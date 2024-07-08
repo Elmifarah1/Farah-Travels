@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Profiles - Farah Travels{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>User Profiles</h2>
+    <a href="{% url 'create_profile' %}" class="btn btn-primary mb-3">Create New Profile</a>
+    <ul class="list-group">
+        {% for profile in profiles %}
+        <li class="list-group-item">
+            <a href="{% url 'profile_detail' profile.pk %}">{{ profile.user.username }}</a>
+            <form method="post" action="{% url 'delete_profile' profile.pk %}" class="d-inline-block float-right ml-2">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+            <a href="{% url 'update_profile' profile.pk %}" class="btn btn-secondary btn-sm float-right">Update</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
