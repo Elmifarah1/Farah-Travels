@@ -19,7 +19,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center"> <!-- Ensure navbar items are centered vertically -->
+                <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
@@ -33,10 +33,7 @@
                         <a class="nav-link" href="{% url 'profile_list' %}">Profiles</a>
                     </li>
                     <li class="nav-item">
-                        <form method="POST" action="{% url 'account_logout' %}" class="d-inline" id="logout-form">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-link nav-link p-0 logout-button" style="color: #fff;">Logout</button>
-                        </form>
+                        <button type="button" class="btn btn-link nav-link p-0 logout-button" style="color: #fff;" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</button>
                     </li>
                     <li class="nav-item">
                         <form class="d-flex" action="{% url 'search_trips' %}" method="get">
@@ -67,6 +64,28 @@
     <footer class="footer text-white text-center py-3" style="background-color: #003366;">
         <p>&copy; 2024 Farah Travels. All rights reserved.</p>
     </footer>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to logout?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form method="POST" action="{% url 'account_logout' %}" id="logout-form">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/base.js' %}"></script>
 </body>
