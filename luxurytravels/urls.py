@@ -13,5 +13,5 @@ urlpatterns = [
     path('profiles/new/', views.create_profile, name='create_profile'),
     path('profiles/<int:pk>/', views.profile_detail, name='profile_detail'),
     path('profiles/<int:pk>/edit/', views.update_profile, name='update_profile'),
-    path('profiles/<int:pk>/delete/', views.delete_profile, name='delete_profile'),  # Delete profile
+    path('profiles/<int:pk>/delete/', views.delete_profile, name='delete_profile'), 
 ]
