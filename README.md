@@ -33,10 +33,11 @@ Roxie is a frequent traveller who loves exploring new destinations. She enjoys m
 User Stories:
 As a user, I want to be able to create an account so that I can manage my travel plans and profile information.
 
-Users can sign up with an email and password.
-Users can log in and log out securely.
-Users can reset their password if forgotten.
-As a traveller, I want to be able to create a new trip with detailed information so that I can keep my travel plans organised.
+* Users can sign up with an email and password.
+* Users can log in and log out securely.
+* Users can reset their password if forgotten.
+* As a traveller, I want to be able to create a new trip with detailed information so that I can keep my travel plans 
+  organised.
 
 Users can enter trip details such as destination, travel date, return date, number of travellers, and departure airport.
 Users can add a description for the trip.
