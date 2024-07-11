@@ -1,6 +1,6 @@
 # Farah Travels 
 
-Farah Travels is a comprehensive travel management app that allows users to seamlessly organize and manage their travel plans. With this app, you can:
+#### Farah Travels is a comprehensive travel management app that allows users to seamlessly organise and manage their travel plans. With this app, you can:
 
 - Create and Manage Trips: Easily plan your trips by adding destinations, travel dates, the number of people traveling, departure airport, and other details.
 - Receive Notifications: Get timely updates and notifications about your travel plans, helping you stay informed.
@@ -64,6 +64,10 @@ Roxie is a frequent traveller who loves exploring new destinations. She enjoys m
 
 My project, Farah Travels, was created using an Agile priciple, which was managed througha project board on Github. This was a vital step towards ensuring that the design of my project was amazing. As this was my first time as an individual developer implementing agile the use of it had allowed me to have a structured framework which facilitated the development process and productivity of my app.
 
+
+![Screenshot of the project](static/images/userstories.jpg)
+
+
 ### Benefits of using Agile in my project was:
 
 - The user stories provided specific goals to target, which helped in maintaining focus and reducing distractions.
@@ -75,10 +79,79 @@ My project, Farah Travels, was created using an Agile priciple, which was manage
 
 ### Colour Scheme
 
-- Login/ signup/forgot password: 
+- Login/signup/forgot password: 
     - Background colour - #f0f0f0
     - Login container - rgba(173, 216, 230, 0.5); 
     - Button - #007bff
 
-- Base.html pages:
-    - 
+- Base pages:
+    - Background colour - #f0f0f0
+    - Home Page Cards - rgba(173, 216, 230, 0.5); 
+    - Home Page Card Text - #333
+    - Home Page Button - #007bff
+
+I chose the colours of my travel app because it beautifully integrates the vibrant colours which enhances my user experience. This in fact makes the planning of a trip visually engaging and enjoyable. I have thought carefully about the implementations of my colours throughout so that the users can have a great journey whilst creating a their trip.
+
+## Typography
+
+I chose the following fonts so that my app would look professional and clean throughout, i did not want to go too over board and made sure my priortiy was user engagment and swiftness. Therefore i chose these fonts so that it would be easy to navigate through content on my app.
+
+- 'Arial', sans-serif;
+
+## Priority Features 
+
+### Sign up
+![Screenshot of the project](static/images/signup.jpg)
+
+Users must have an account to be able to access the app.
+
+
+### Login
+
+![Screenshot of the project](static/images/signin.jpg)
+
+Users must sign in to use the app
+
+
+### Home Page
+![Screenshot of the project](static/images/home.jpg)
+
+The landing page of Farah Travels introduces users to the platform with a sign option which encourgaes new users to sign up. By signing up and signing in, users can view the available trips, create new trips, and manage their profiles. The navigation bar provides quick and easy access to essential sections of the website, including Home, Trips, Create Trip, Profiles, searchbar and also a option too Logout.
+
+
+### Create trip
+
+![Screenshot of the project](static/images/createtrip.jpg)
+
+This section of my app allows the users to create a trip based on where they would like to go, it allows them to chose the dates and also the locations of where they want to go. Also gives the users options to edit or delete whenever they would like to do.
+
+### View Trip
+![Screenshot of the project](static/images/viewtrip.jpg)
+
+This section allows users to view the page where their trips are located in, they can also update and delete the trips from this section of the app.
+
+
+### Create profile 
+![Screenshot of the project](static/images/createprofile.jpg)
+
+This section of my app allows users to create a profile which includes all their personal information such as adrress, passport number and date of birth.
+
+
+### View Profile 
+
+![Screenshot of the project](static/images/viewprofile.jpg)
+
+This section allows the user to view their profile and to also update or delete it in the future, it also holds their important information.
+
+### Future Features 
+
+- I would like to implement a option where users will be able to view more details about the specific trips within my home page, in order to do this i would have to create seperate HTML templates and include information about the location and any extra's i want such as the weather and tusted travel agency to use that are verified by Farah Travels.
+- Provide API'S to show Live deals that they can implement.
+- Have a contact support feature where they can speak to a live agent.
+- Include a new model for Taks, where the user can create tasks to help them get ready for the trip.
+- Include clips and videos of given locations to grasp the users attention.
+- Other features would be too also style and make the page look more appealing as my main requirement was too get the site working.
+
+## DataBase Design 
+
+![Screenshot of the project](static/images/lucidchart.jpg)
