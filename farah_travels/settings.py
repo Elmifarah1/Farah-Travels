@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import dj_database_url
 
+# Import environment variables from env.py if it exists
 if os.path.isfile('env.py'):
     import env
 
@@ -84,15 +85,8 @@ WSGI_APPLICATION = 'farah_travels.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
@@ -142,6 +136,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
+    'https://8000-elmifarah1-farahtravels-l9xrnkqc3j5.ws.codeinstitute-ide.net',
+    'https://*.herokuapp.com',
 ]
 
 # Django Allauth configuration
@@ -157,11 +153,6 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_SIGNUP_FORM_CLASS = None
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://*.gitpod.io',
-    'https://8000-elmifarah1-farahtravels-l9xrnkqc3j5.ws.codeinstitute-ide.net',  # Add this line
-]
-
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
@@ -172,3 +163,23 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# Logging configuration to help diagnose issues
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+    'django': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+        'propagate': True,
+    },
+}
