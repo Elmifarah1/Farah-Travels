@@ -5,6 +5,10 @@ class TripForm(forms.ModelForm):
     class Meta:
         model = Trip
         fields = ['name', 'destination', 'travel_date', 'return_date', 'num_people', 'departure_airport', 'description']
+        widgets = {
+            'travel_date': forms.DateInput(attrs={'type': 'date', 'class': 'datepicker'}),
+            'return_date': forms.DateInput(attrs={'type': 'date', 'class': 'datepicker'}),
+        }
 
 class TaskForm(forms.ModelForm):
     class Meta:

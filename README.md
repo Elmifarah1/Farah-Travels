@@ -48,10 +48,6 @@ Roxie is a frequent traveller who loves exploring new destinations. She enjoys m
 
 
 
-
-
-
-
 ## Agile:
 
 My project, Farah Travels, was created using an Agile priciple, which was managed througha project board on Github. This was a vital step towards ensuring that the design of my project was amazing. As this was my first time as an individual developer implementing agile the use of it had allowed me to have a structured framework which facilitated the development process and productivity of my app.
