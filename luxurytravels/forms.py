@@ -10,7 +10,6 @@ class TripForm(forms.ModelForm):
             'return_date': forms.DateInput(attrs={'type': 'date', 'class': 'datepicker'}),
         }
 
-
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
