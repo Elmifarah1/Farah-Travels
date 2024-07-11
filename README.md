@@ -47,6 +47,18 @@ Roxie is a frequent traveller who loves exploring new destinations. She enjoys m
 ## Wireframes:
 
 
+![Screenshot of the project](static/images/wireframe1.jpg)
+![Screenshot of the project](static/images/wireframe2.jpg)
+![Screenshot of the project](static/images/wireframe3.jpg)
+![Screenshot of the project](static/images/wireframe4.jpg)
+![Screenshot of the project](static/images/wireframe5.jpg)
+![Screenshot of the project](static/images/wireframe6.jpg)
+![Screenshot of the project](static/images/wireframe7.jpg)
+
+
+
+
+
 
 ## Agile:
 
