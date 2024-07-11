@@ -67,8 +67,10 @@ My project, Farah Travels, was created using an Agile priciple, which was manage
 
 ### Colour Scheme
 
-- Login/signup/forgot password page 
+- Login/ signup/forgot password: 
     - Background colour - #f0f0f0
     - Login container - rgba(173, 216, 230, 0.5); 
     - Button - #007bff
 
+- Base.html pages:
+    - 
