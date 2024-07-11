@@ -15,11 +15,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-elmifarah1-farahtravels-l9xrnkqc3j5.ws.codeinstitute-ide.net', '.herokuapp.com']
 
-# Application definition
+# Application definition.
 
 INSTALLED_APPS = [
     'django.contrib.admin',
