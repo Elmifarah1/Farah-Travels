@@ -1,5 +1,5 @@
 from django import forms
-from .models import Trip, Task, Profile
+from .models import Trip, Profile
 
 class TripForm(forms.ModelForm):
     class Meta:
@@ -10,10 +10,6 @@ class TripForm(forms.ModelForm):
             'return_date': forms.DateInput(attrs={'type': 'date', 'class': 'datepicker'}),
         }
 
-class TaskForm(forms.ModelForm):
-    class Meta:
-        model = Task
-        fields = ['name', 'description', 'completed']
 
 class ProfileForm(forms.ModelForm):
     class Meta:

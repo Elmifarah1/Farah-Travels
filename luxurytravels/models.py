@@ -15,15 +15,6 @@ class Trip(models.Model):
     def __str__(self):
         return f"{self.name} to {self.destination}"
 
-class Task(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-    trip = models.ForeignKey(Trip, related_name='tasks', on_delete=models.CASCADE)
-    completed = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.name
-
 class Notification(models.Model):
     user = models.ForeignKey(User, related_name='notifications', on_delete=models.CASCADE)
     message = models.CharField(max_length=255)
