@@ -182,6 +182,8 @@ My database schema is designed to manage a travel application with user authenti
 
 ## Validation 
 
+[W3C Validator](https://validator.w3.org/nu/) - to validate my HTML files.
+
 ### HTML
 
 | Page | W3C URL | Screenshot | Notes |
@@ -197,8 +199,29 @@ My database schema is designed to manage a travel application with user authenti
 ### CSS
 
 
- I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file.
+ - [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS files.
  
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=enhttps://jigsaw.w3.org/css-validator/validator) | ![validate css](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/200fc160-1092-4cd0-bba4-2ab1a721eb72) | Pass: No Errors |
+| Base.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![Screenshot of the project](static/images/baseV.jpg)  | Pass: No Errors |
+| home.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Fstatic%2Fcss%2Fhome.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![Screenshot of the project](static/images/homecssV.jpg)  | Pass: No Errors |
+| login.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Fstatic%2Fcss%2Flogin.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![Screenshot of the project](static/images/logincssV.jpg)  | Pass: No Errors |
+| password_reset.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Fstatic%2Fcss%2Fpassword_reset.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![Screenshot of the project](static/images/passwordresetcss.jpg)  | Pass: No Errors |
+| signup.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Fstatic%2Fcss%2Fsignup.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![Screenshot of the project](static/images/signupcssV.jpg)  | Pass: No Errors |
+
+
+### Python
+
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/run.py) |   | Pass: No Errors |
+| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/boutique-ado/settings.py) | ![screenshot]![settings py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/7951202c-2d55-4adb-90d6-8fef0707c82c)
+ | Pass: No Errors |
+| Book views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/blog/views.py) | ![screenshot]![views py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/4f545d53-b304-4600-b9fb-d4feb93b6c93)
+ | Pass: No Errors |
+| Book urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/checkout/urls.py) | ![screenshot]![urls py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e3f52187-1f65-4171-b1ba-e9096d1b5fc0)
+ | Pass: No Errors |
+|  models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/profiles/models.py) | ![screenshot]![models py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/f3438ec1-f275-44b6-847d-48a93c0466ed)
+ | Pass: No Errors |
