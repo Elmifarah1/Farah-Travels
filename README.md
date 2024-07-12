@@ -152,6 +152,23 @@ This section allows the user to view their profile and to also update or delete 
 - Include clips and videos of given locations to grasp the users attention.
 - Other features would be too also style and make the page look more appealing as my main requirement was too get the site working.
 
-## DataBase Design 
+## DataBase Design:
 
 ![Screenshot of the project](static/images/lucidchart.jpg)
+
+I used Lucid Chart to create an Entity Relationship Diagram (ERD), This was very helpful when i started planning out my Farah Travels app. The ERD made it easy to see how the databases connect and understand the relationships between tables. The arrows showed how the data fields are linked, ensuring a logical data structure and making the development process smoother.
+
+## Data Models:
+
+![Screenshot of the project](static/images/schema.png)
+
+My database schema is designed to manage a travel application with user authentication and various features for managing trips, notifications, profiles. At the core of the schema is the User table, which utilizes Django's built-in User model for user management. This table includes fields for usernames, passwords, emails, and user status attributes such as whether the user is active, or a superuser. Django Allauth is integrated to handle user authentication, registration, and social login features, ensuring a secure and user-friendly authentication process.
+
+
+
+
+
+
+
+
+## Validation 
