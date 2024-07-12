@@ -1,5 +1,10 @@
 # Farah Travels 
 
+View live site here : [Farah Travels](https://farahtravels-e6089254b282.herokuapp.com/)  
+
+For Admin access with relevant sign-in information: [Farah Travels Admin](https://farahtravels-e6089254b282.herokuapp.com/admin/login/?next=/admin/)
+
+
 #### Farah Travels is a comprehensive travel management app that allows users to seamlessly organise and manage their travel plans. With this app, you can:
 
 - Create and Manage Trips: Easily plan your trips by adding destinations, travel dates, the number of people traveling, departure airport, and other details.
@@ -165,10 +170,35 @@ I used Lucid Chart to create an Entity Relationship Diagram (ERD), This was very
 My database schema is designed to manage a travel application with user authentication and various features for managing trips, notifications, profiles. At the core of the schema is the User table, which utilizes Django's built-in User model for user management. This table includes fields for usernames, passwords, emails, and user status attributes such as whether the user is active, or a superuser. Django Allauth is integrated to handle user authentication, registration, and social login features, ensuring a secure and user-friendly authentication process.
 
 
+- The User table stores essential user information, using Django's built-in model for authentication and user management. Each user can create, update, and delete trips, with these trips linked to the user via the Trip table. This table includes details like trip name, destination, dates, number of people, and departure airport.
 
+- Notifications are handled through the Notification table, linked to the User table. Each notification is associated with a user and includes a message notifiying the user on the change or action preformed.
+
+- The Profile table has a one-to-one relationship with the User table, storing additional personal information like full name, address, date of birth, phone number, passport number, and emergency contact details.
 
 
 
 
 
 ## Validation 
+
+### HTML
+
+| Page | W3C URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2F) | ![Screenshot of the project](static/images/homeV.jpg) | Pass: No Errors |
+| Create Trip | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Ftrips%2Fnew%2F) | ![Screenshot of the project](static/images/createtripV.jpg) | Pass: No Errors |
+| View Trips | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Ftrips%2F) | ![Screenshot of the project](static/images/viewtripV.jpg) | Pass: No Errors |
+| Profile | [W3C](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Fprofiles%2F) | ![Screenshot of the project](static/images/profileV.jpg) | Pass: No Errors |
+| Sign Up| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Faccounts%2Fsignup%2F) | ![Screenshot of the project](static/images/signupV.jpg) | Pass: No Errors |
+| Sign in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2F) | ![Screenshot of the project](static/images/signinV.jpg) | Pass: No Errors |
+
+
+### CSS
+
+
+ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file.
+ 
+| File | Jigsaw URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=enhttps://jigsaw.w3.org/css-validator/validator) | ![validate css](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/200fc160-1092-4cd0-bba4-2ab1a721eb72) | Pass: No Errors |
