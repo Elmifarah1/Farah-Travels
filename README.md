@@ -1,9 +1,62 @@
 # Farah Travels 
 
-View live site here : [Farah Travels](https://farahtravels-e6089254b282.herokuapp.com/)  
+![Screenshot of the project](static/images/FT-Logo.png) 
 
-For Admin access with relevant sign-in information: [Farah Travels Admin](https://farahtravels-e6089254b282.herokuapp.com/admin/login/?next=/admin/)
+### View live site here : [Farah Travels](https://farahtravels-e6089254b282.herokuapp.com/)  
 
+### For Admin access with relevant sign-in information: [Farah Travels Admin](https://farahtravels-e6089254b282.herokuapp.com/admin/login/?next=/admin/)
+
+## Table of Contents
+
+- [FarahTravels](#farahtravels)
+  - [Overview](#overview)
+
+- [Purpose and Target Audience](#purpose-and-target-audience)
+  - [Problem Statement](#problem-statement)
+  - [Purpose](#purpose)
+  - [Target Audience](#target-audience)
+
+- [Persona](#persona)
+
+- [Wireframe](#wireframe)
+
+- [User Stories](#user-stories)
+
+- [Agile](#agile)
+  - [Benefits of using Agile in my project was](#benefits-of-using-Agile-in-my-project-was)
+
+- [Design Choices](#design-choices)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+
+- [Priority Features](#priority-features)
+  - [Sign up](#sign-up)
+  - [Login](#Login)
+  - [Home](#home)
+  - [Create Trip](#create-trip)
+  - [View Trip](#view-trip)
+  - [Create Profile](#create-profile)
+  - [View Profile](#view-profile)
+  - [Future Features](#future-features)
+
+-  [Database Design](#database-design)
+  - [Data Models](#data-models)
+
+- [Validation](#Validation)
+  - [HTML](#html)
+  - [CSS](#html)
+  - [Python](#python)
+
+- [Technologies & Languages Used](#technologies--languages-used)
+  - [Libraries & Frameworks](#libraries--frameworks)
+  - [Tools & Programs](#tools--programs)
+
+
+
+
+   
+  
+## Overview
 
 #### Farah Travels is a comprehensive travel management app that allows users to seamlessly organise and manage their travel plans. With this app, you can:
 
@@ -51,7 +104,6 @@ Roxie is a frequent traveller who loves exploring new destinations. She enjoys m
 
 ## Wireframes:
 
-
 ![Screenshot of the project](static/images/wireframe1.jpg)
 ![Screenshot of the project](static/images/wireframe2.jpg)
 ![Screenshot of the project](static/images/wireframe3.jpg)
@@ -59,10 +111,6 @@ Roxie is a frequent traveller who loves exploring new destinations. She enjoys m
 ![Screenshot of the project](static/images/wireframe5.jpg)
 ![Screenshot of the project](static/images/wireframe6.jpg)
 ![Screenshot of the project](static/images/wireframe7.jpg)
-
-
-
-
 
 
 ## Agile:
@@ -225,3 +273,47 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
  | Pass: No Errors |
 |  models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/profiles/models.py) | ![screenshot]![models py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/f3438ec1-f275-44b6-847d-48a93c0466ed)
  | Pass: No Errors |
+
+
+ ## Technologies used 
+
+Technologies \& Languages Used
+
+ - Django
+ - HTML
+ - CSS
+ - SQL 
+ - Git
+ - Gitpod 
+ - github 
+ - Cloudinary 
+ - Heroku
+ - Balsamiq
+
+Libraries \& Frameworks
+ - asgiref==3.8.1
+ - cloudinary==1.40.0
+ - crispy-bootstrap5==2024.2
+ - dj-database-url==0.5.0
+ - dj3-cloudinary-storage==0.0.6
+ - Django==4.2.13
+ - django-allauth==0.63.3
+ - django-bootstrap5==24.2
+ - django-crispy-forms==2.2
+ - gunicorn==20.1.0
+ - psycopg2==2.9.9
+ - sqlparse==0.5.0
+ - whitenoise==6.7.0
+
+Tools \& Programs
+ - favicon
+ - trello
+ - git project
+ - chatgpt
+ - Dbdiagram
+ - slack
+ - stackoverflow
+ - coding coach
+
+
+
