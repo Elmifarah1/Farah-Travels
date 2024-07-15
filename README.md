@@ -41,6 +41,8 @@
 
 - [Database Schema](#database-schema)
 
+- [Admin Panel](#admin-panel)
+
 - [Validation](#Validation)
   - [HTML](#html)
   - [CSS](#html)
@@ -49,6 +51,9 @@
 - [Notification](#notification)
 
 - [Responsivness](#responsivness)
+
+- [Testing](#testing)
+
 
 - [Technologies Used](#technologies-used)
   - [Libraries \& Frameworks](#libraries--frameworks)
@@ -219,6 +224,15 @@ My database schema is designed to manage a travel application with user authenti
 - The Profile table has a one-to-one relationship with the User table, storing additional personal information like full name, address, date of birth, phone number, passport number, and emergency contact details.
 
 
+## Admin Panel
+
+Through Django's built-in Administration Panel, administrators have full control over the data submitted to the website by registered users. To access the Admin panel, the administrator appends '/admin/' to the website's URL, resulting in https://8000-elmifarah1-farahtravels-l9xrnkqc3j5.ws.codeinstitute-ide.net/admin.com/admin/. A username and password are required to log in.
+
+For Farah Travels, administrator approval is required to book or view trips and to also ensure the site remains on topic and free from spam. Registered, logged-in users have instant access to create trips and view trips.
+
+![Screenshot of the project](static/images/adminp.jpg)
+
+
 ## Validation 
 
 [W3C Validator](https://validator.w3.org/nu/) - to validate my HTML files.
@@ -294,6 +308,16 @@ I then went onto testing the following browsers:
  ![Screenshot of the project](static/images/safari.jpg) 
 
 - All the browsers are responsives and works great without any errors or bugs
+
+
+## Testing
+
+### Lighthouse Audit:
+
+
+
+
+
 
 
  ## Technologies used 
