@@ -9,9 +9,25 @@ urlpatterns = [
     path('trips/<int:pk>/edit/', views.update_trip, name='update_trip'),
     path('trips/<int:pk>/delete/', views.delete_trip, name='delete_trip'),
     path('search/', views.search_trips, name='search_trips'),
-    path('profiles/', views.profile_list, name='profile_list'),  
-    path('profiles/new/', views.create_profile, name='create_profile'),
-    path('profiles/<int:pk>/', views.profile_detail, name='profile_detail'),
-    path('profiles/<int:pk>/edit/', views.update_profile, name='update_profile'),
-    path('profiles/<int:pk>/delete/', views.delete_profile, name='delete_profile'), 
+    path('profiles/', views.profile_list, name='profile_list'),
+    path(
+        'profiles/new/',
+        views.create_profile,
+        name='create_profile',
+    ),
+    path(
+        'profiles/<int:pk>/',
+        views.profile_detail,
+        name='profile_detail',
+    ),
+    path(
+        'profiles/<int:pk>/edit/',
+        views.update_profile,
+        name='update_profile',
+    ),
+    path(
+        'profiles/<int:pk>/delete/',
+        views.delete_profile,
+        name='delete_profile',
+    ),
 ]

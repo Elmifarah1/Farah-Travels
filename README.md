@@ -264,15 +264,11 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/run.py) |   | Pass: No Errors |
-| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/boutique-ado/settings.py) | ![screenshot]![settings py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/7951202c-2d55-4adb-90d6-8fef0707c82c)
- | Pass: No Errors |
-| Book views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/blog/views.py) | ![screenshot]![views py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/4f545d53-b304-4600-b9fb-d4feb93b6c93)
- | Pass: No Errors |
-| Book urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/checkout/urls.py) | ![screenshot]![urls py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e3f52187-1f65-4171-b1ba-e9096d1b5fc0)
- | Pass: No Errors |
-|  models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/profiles/models.py) | ![screenshot]![models py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/f3438ec1-f275-44b6-847d-48a93c0466ed)
- | Pass: No Errors |
+| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/formpyV.jpg)  | Pass: No Errors |
+| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/settingspyV.jpg)  | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/urlspyV.jpg)  | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/viewspyV.jpg)  | Pass: Although i have two errors stating that line 92 and 135 are too long, i still believe it is readable and ully functioning so it should not be that much of an issue. |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/modelspyV.jpg)  | Pass: No Errors |
 
 
  ## Technologies used 
