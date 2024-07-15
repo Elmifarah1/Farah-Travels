@@ -1,6 +1,6 @@
 # Farah Travels 
 
-![Screenshot of the project](static/images/FT-Logo.png) 
+![Screenshot of the project](static/images/mylogo.jpg) 
 
 ### View live site here : [Farah Travels](https://farahtravels-e6089254b282.herokuapp.com/)  
 
@@ -39,23 +39,23 @@
   - [View Profile](#view-profile)
   - [Future Features](#future-features)
 
--  [Database Design](#database-design)
-  - [Data Models](#data-models)
+- [Database Schema](#database-schema)
 
 - [Validation](#Validation)
   - [HTML](#html)
   - [CSS](#html)
   - [Python](#python)
 
-- [Technologies & Languages Used](#technologies--languages-used)
-  - [Libraries & Frameworks](#libraries--frameworks)
-  - [Tools & Programs](#tools--programs)
+- [Notification](#notification)
+
+- [Responsivness](#responsivness)
+
+- [Technologies Used](#technologies-used)
+  - [Libraries \& Frameworks](#libraries--frameworks)
+  - [Tools \& Programs](#tools--programs)
 
 
 
-
-   
-  
 ## Overview
 
 #### Farah Travels is a comprehensive travel management app that allows users to seamlessly organise and manage their travel plans. With this app, you can:
@@ -118,7 +118,7 @@ Roxie is a frequent traveller who loves exploring new destinations. She enjoys m
 My project, Farah Travels, was created using an Agile priciple, which was managed througha project board on Github. This was a vital step towards ensuring that the design of my project was amazing. As this was my first time as an individual developer implementing agile the use of it had allowed me to have a structured framework which facilitated the development process and productivity of my app.
 
 
-![Screenshot of the project](static/images/userstories.jpg)
+![Screenshot of the project](static/images/canvanboard.jpg)
 
 
 ### Benefits of using Agile in my project was:
@@ -205,17 +205,11 @@ This section allows the user to view their profile and to also update or delete 
 - Include clips and videos of given locations to grasp the users attention.
 - Other features would be too also style and make the page look more appealing as my main requirement was too get the site working.
 
-## DataBase Design:
-
-![Screenshot of the project](static/images/lucidchart.jpg)
-
-I used Lucid Chart to create an Entity Relationship Diagram (ERD), This was very helpful when i started planning out my Farah Travels app. The ERD made it easy to see how the databases connect and understand the relationships between tables. The arrows showed how the data fields are linked, ensuring a logical data structure and making the development process smoother.
-
-## Data Models:
+## Database Schema:
 
 ![Screenshot of the project](static/images/schema.png)
 
-My database schema is designed to manage a travel application with user authentication and various features for managing trips, notifications, profiles. At the core of the schema is the User table, which utilizes Django's built-in User model for user management. This table includes fields for usernames, passwords, emails, and user status attributes such as whether the user is active, or a superuser. Django Allauth is integrated to handle user authentication, registration, and social login features, ensuring a secure and user-friendly authentication process.
+My database schema is designed to manage a travel application with user authentication and various features for managing trips, notifications, profiles. At the core of the schema is the User table, which utilises Django's built-in User model for user management. This table includes fields for usernames, passwords, emails or a superuser. Django Allauth is integrated to handle user authentication, registration, and social login features, ensuring a secure and user-friendly authentication process.
 
 
 - The User table stores essential user information, using Django's built-in model for authentication and user management. Each user can create, update, and delete trips, with these trips linked to the user via the Trip table. This table includes details like trip name, destination, dates, number of people, and departure airport.
@@ -223,9 +217,6 @@ My database schema is designed to manage a travel application with user authenti
 - Notifications are handled through the Notification table, linked to the User table. Each notification is associated with a user and includes a message notifiying the user on the change or action preformed.
 
 - The Profile table has a one-to-one relationship with the User table, storing additional personal information like full name, address, date of birth, phone number, passport number, and emergency contact details.
-
-
-
 
 
 ## Validation 
@@ -260,7 +251,7 @@ My database schema is designed to manage a travel application with user authenti
 
 ### Python
 
-I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+- Used [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
@@ -271,9 +262,43 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/modelspyV.jpg)  | Pass: No Errors |
 
 
+## Notification
+
+I have implemented notifcations to show that the users are able to confirm when they have done an action such as signing in or deleting/creating a trip or profile.
+
+![Screenshot of the project](static/images/notif.jpg)
+
+
+## Responsivness 
+
+I used the inspect/development tools in order to test wether or not my app is responsive across different devices and platforms such as laptops, mobile phones and also tablets.
+
+i conducted full tests on the following devices 
+
+| Device | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| ipad pro | [Farah Travels](https://farahtravels-e6089254b282.herokuapp.com/) | ![Screenshot of the project](static/images/ipadpro.jpg)  | My App is fully responsive on the I pad pro device |
+| Ipad Air | [Farah Travels](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/ipadair.jpg)  | App is fully responsive with no issue on the Ipad Air |
+| Iphone XR | [Farah Travels](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/iphonexr.jpg)  | App is fully responsive with no issue on the I phone XR |
+| Iphone SE | [Farah Travels](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/iphonese.jpg)  | App is fully responsive with no issue on the I phone SE |
+
+### Browser
+
+I then went onto testing the following browsers:
+
+- **Google Chrome**
+ ![Screenshot of the project](static/images/chromeapp.jpg)
+- **Firefox**
+ ![Screenshot of the project](static/images/firefox.jpg) 
+- **Safari**
+ ![Screenshot of the project](static/images/safari.jpg) 
+
+- All the browsers are responsives and works great without any errors or bugs
+
+
  ## Technologies used 
 
-Technologies \& Languages Used
+**Technologies & Languages Used**
 
  - Django
  - HTML
@@ -286,7 +311,7 @@ Technologies \& Languages Used
  - Heroku
  - Balsamiq
 
-Libraries \& Frameworks
+### Libraries & Frameworks
  - asgiref==3.8.1
  - cloudinary==1.40.0
  - crispy-bootstrap5==2024.2
@@ -301,7 +326,7 @@ Libraries \& Frameworks
  - sqlparse==0.5.0
  - whitenoise==6.7.0
 
-Tools \& Programs
+### Tools & Programs
  - favicon
  - trello
  - git project
@@ -310,6 +335,3 @@ Tools \& Programs
  - slack
  - stackoverflow
  - coding coach
-
-
-
