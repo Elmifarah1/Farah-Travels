@@ -97,7 +97,6 @@ Farah Travels is designed to provide a seamless travel management experience. Th
 Create and manage trips with detailed information such as destinations, travel dates, number of travelers, and departure airport.
 Maintain a comprehensive user profile, including personal and travel-related information such as full name, address, date of birth, phone number, passport number, and emergency contacts.
 Search for and review travel plans based on specific criteria.
-Securely reset passwords to ensure constant access to their accounts.
 
 ### Target Audience:
 The primary target audience includes frequent travelers who need a reliable tool to organise their trips. It also targets individuals who value having an up-to-date and secure profile for travel purposes, as well as those who appreciate a user-friendly interface to streamline their travel planning and management processes.
@@ -188,14 +187,14 @@ Users must sign in to use the app
 ### Home Page
 ![Screenshot of the project](static/images/home.jpg)
 
-The landing page of Farah Travels introduces users to the platform with a sign option which encourgaes new users to sign up. By signing up and signing in, users can view the available trips, create new trips, and manage their profiles. The navigation bar provides quick and easy access to essential sections of the website, including Home, Trips, Create Trip, Profiles, searchbar and also a option too Logout.
+The landing page of Farah Travels introduces users to the platform with different holiday destination as options, users can also view the available trips, create new trips, and manage their profiles. The navigation bar provides quick and easy access to essential sections of the website, including Home, Trips, Create Trip, Profiles, searchbar and also a option too Logout.
 
 
 ### Create trip
 
 ![Screenshot of the project](static/images/createtrip.jpg)
 
-This section of my app allows the users to create a trip based on where they would like to go, it allows them to chose the dates and also the locations of where they want to go. Also gives the users options to edit or delete whenever they would like to do.
+This section of my app allows the users to create a trip based on where they would like to go, it allows them to choose the dates and also the locations of where they want to go. Also gives the users options to edit or delete whenever they would like to do so.
 
 ### View Trip
 ![Screenshot of the project](static/images/viewtrip.jpg)
@@ -206,7 +205,7 @@ This section allows users to view the page where their trips are located in, the
 ### Create profile 
 ![Screenshot of the project](static/images/createprofile.jpg)
 
-This section of my app allows users to create a profile which includes all their personal information such as adrress, passport number and date of birth.
+This section of my app allows users to create a profile which includes all their personal information such as address, passport number and date of birth.
 
 
 ### View Profile 
@@ -228,7 +227,7 @@ This section allows the user to view their profile and to also update or delete 
 
 ![Screenshot of the project](static/images/schema.png)
 
-My database schema is designed to manage a travel application with user authentication and various features for managing trips, notifications, profiles. At the core of the schema is the User table, which utilises Django's built-in User model for user management. This table includes fields for usernames, passwords, emails or a superuser. Django Allauth is integrated to handle user authentication, registration, and social login features, ensuring a secure and user-friendly authentication process.
+My database schema is designed to manage a travel application with user authentication and various features for managing trips, notifications, profiles. At the core of the schema is the User table, which utilises Django's built-in user model for user management. This table includes fields for usernames, passwords, emails or a superuser. Django Allauth is integrated to handle user authentication, registration, and social login features, ensuring a secure and user-friendly authentication process.
 
 
 - The User table stores essential user information, using Django's built-in model for authentication and user management. Each user can create, update, and delete trips, with these trips linked to the user via the Trip table. This table includes details like trip name, destination, dates, number of people, and departure airport.
@@ -299,7 +298,7 @@ For Farah Travels, administrator approval is required to book or view trips and 
 | Home | Navigates to the home page when clicked | Pass |
 | Trips | Navigates to a trips list  page when clicked | Pass |
 | Create Trips | Navigates to a form to create a trip when clicked | Pass |
-| Profile | Navigates to a Profile Page form when clicked | Pass |
+| Profile | Navigates to a profile page form when clicked | Pass |
 | Sign up | Navigates to a registration form when clicked | Pass |
 | Log in | Navigates to a screen where users can log in when clicked | Pass |
 | Logout | Navigates to a page confirming for the user to log out | Pass |
@@ -314,7 +313,7 @@ I have implemented notifcations to show that the users are able to confirm when 
 
 ## Responsivness 
 
-I used the inspect/development tools in order to test wether or not my app is responsive across different devices and platforms such as laptops, mobile phones and also tablets.
+I used the inspect/development tools in order to test wether or not my app is responsive across different devices and platforms such as mobile phones and tablets.
 
 i conducted full tests on the following devices 
 
@@ -452,7 +451,7 @@ In order to start this project from scratch, you must first create a new Github 
 2. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
 3. Create a new Django project in the terminal ```django-admin startproject farahtravels .```
 4. Create a new app eg. ```python3 mangage.py startapp luxurytravels```
-5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'luxurytravels',
+5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'Farah Travels',
 6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
 7. Migrate the changes with commands: ```python3 manage.py migrate```
 8. An **env.py** file must be created to store all protected data such as the **DATABASE_URL** and **SECRET_KEY**. These may be called upon in your project's **settings.py** file along with your Database configurations. The **env.py** file must be added to your **gitignore** file so that your important, protected information is not pushed to public viewing on GitHub. For adding to **env.py**:
