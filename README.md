@@ -71,6 +71,9 @@
   - [Clone project](#clone-project)
   - [Fork Project](#fork-project)
 
+- [Bugs](#bugs)
+
+
 
 ## Overview
 
@@ -237,7 +240,7 @@ My database schema is designed to manage a travel application with user authenti
 
 ## Admin Panel
 
-Through Django's built-in Administration Panel, administrators have full control over the data submitted to the website by registered users. To access the Admin panel, the administrator appends '/admin/' to the website's URL, resulting in https://8000-elmifarah1-farahtravels-l9xrnkqc3j5.ws.codeinstitute-ide.net/admin.com/admin/. A username and password are required to log in.
+Through Django's built-in Administration Panel, administrators have full control over the data submitted to the website by registered users. To access the Admin panel, the administrator appends '/admin/' to the website's URL, resulting in [Admin Panel](https://8000-elmifarah1-farahtravels-l9xrnkqc3j5.ws.codeinstitute-ide.net/admin.com/admin/) . A username and password are required to log in.
 
 For Farah Travels, administrator approval is required to book or view trips and to also ensure the site remains on topic and free from spam. Registered, logged-in users have instant access to create trips and view trips.
 
@@ -283,7 +286,7 @@ For Farah Travels, administrator approval is required to book or view trips and 
 | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/formpyV.jpg)  | Pass: No Errors |
 | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/settingspyV.jpg)  | Pass: No Errors |
 | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/urlspyV.jpg)  | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/viewspyV.jpg)  | Pass: Although i have two errors stating that line 92 and 135 are too long, i still believe it is readable and ully functioning so it should not be that much of an issue. |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/viewspyV.jpg)  | Pass: Although i have two errors stating that line 92 and 135 are too long, i still believe it is readable and fully functioning so it should not be that much of an issue. |
 | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/) | ![Screenshot of the project](static/images/modelspyV.jpg)  | Pass: No Errors |
 
 ## Page Links 
@@ -447,9 +450,9 @@ In order to start this project from scratch, you must first create a new Github 
 - ```pip3 install dj3-cloudinary-storage```  
   
 2. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
-3. Create a new Django project in the terminal ```django-admin startproject freefido .```
-4. Create a new app eg. ```python3 mangage.py startapp booking```
-5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'booking',
+3. Create a new Django project in the terminal ```django-admin startproject farahtravels .```
+4. Create a new app eg. ```python3 mangage.py startapp luxurytravels```
+5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'luxurytravels',
 6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
 7. Migrate the changes with commands: ```python3 manage.py migrate```
 8. An **env.py** file must be created to store all protected data such as the **DATABASE_URL** and **SECRET_KEY**. These may be called upon in your project's **settings.py** file along with your Database configurations. The **env.py** file must be added to your **gitignore** file so that your important, protected information is not pushed to public viewing on GitHub. For adding to **env.py**:
@@ -566,4 +569,15 @@ A copy of the original repository can be made through GitHub. Please follow the 
 3. Above the repository file section and to the top, right of the page is the '**Fork**' button, click on this to make a fork of this repository.
 4. You should now have access to a forked copy of this repository in your Github account.
 5. Follow the above Django Project Steps if you wish to work on the project.
+
+
+## Bugs 
+
+During the development of this application, I thoroughly tested all forms to ensure they handle user input correctly. For the "Create Profile" form, we tested scenarios such as valid inputs, missing required fields, invalid date formats, and invalid phone numbers. The "Create Trip" form was validated for proper handling of valid inputs, missing fields, non-numeric people counts, and incorrect date ranges. Similar comprehensive testing was performed for the "Update Profile" and "Update Trip" forms to ensure they function correctly under various conditions.
+
+All identified bugs during these tests have been resolved, ensuring a smooth user experience. However, the password reset feature is not yet implemented. This feature, along with other future features, will be added in the near future.
+
+
+
+
 
