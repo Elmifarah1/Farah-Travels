@@ -52,12 +52,13 @@
 
 - [Responsivness](#responsivness)
 
-- [Testing](#testing)
-
-
 - [Technologies Used](#technologies-used)
   - [Libraries \& Frameworks](#libraries--frameworks)
   - [Tools \& Programs](#tools--programs)
+
+- [Deployment](#deployment)
+
+- [Testing](#testing)
 
 
 
@@ -246,7 +247,7 @@ For Farah Travels, administrator approval is required to book or view trips and 
 | View Trips | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Ftrips%2F) | ![Screenshot of the project](static/images/viewtripV.jpg) | Pass: No Errors |
 | Profile | [W3C](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Fprofiles%2F) | ![Screenshot of the project](static/images/profileV.jpg) | Pass: No Errors |
 | Sign Up| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Faccounts%2Fsignup%2F) | ![Screenshot of the project](static/images/signupV.jpg) | Pass: No Errors |
-| Sign in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2F) | ![Screenshot of the project](static/images/signinV.jpg) | Pass: No Errors |
+| Sign In | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarahtravels-e6089254b282.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2F) | ![Screenshot of the project](static/images/signinV.jpg) | Pass: No Errors |
 
 
 ### CSS
