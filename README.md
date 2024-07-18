@@ -60,6 +60,8 @@
 
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
+  - [User Story Testing](#user-story-testing)
+
 
 
 - [Deployment](#deployment)
