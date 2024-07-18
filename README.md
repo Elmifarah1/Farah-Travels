@@ -335,7 +335,7 @@ I then went onto testing the following browsers:
 - **Safari**
  ![Screenshot of the project](static/images/safari.jpg) 
 
-- All the browsers are responsives and works great without any errors or bugs
+- All the browsers are responsives and works great without any errors or bugs.
 
  ## Technologies used 
 
@@ -428,7 +428,7 @@ Desktop Home Page:
 |                      | Text Fields                    | XSS attack prevention              | Enter a script tag (e.g., <script>alert('XSS')</script>) in any text field       | The form should escape or sanitize the input, preventing the script from executing, and display a validation error.|
 |                      | Text Fields                    | SQL injection prevention           | Enter a common SQL injection string (e.g., ''; DROP TABLE users; --) in any text field | The form should escape or handle the input, preventing SQL execution, and display a validation error if necessary.  |
 
-## User Story Testing 
+## User Story Testing
 
 ### User Story:
 As a user, I want to be able to create an account so that I can manage my travel plans and profile information.
