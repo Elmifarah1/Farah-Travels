@@ -428,6 +428,129 @@ Desktop Home Page:
 |                      | Text Fields                    | XSS attack prevention              | Enter a script tag (e.g., <script>alert('XSS')</script>) in any text field       | The form should escape or sanitize the input, preventing the script from executing, and display a validation error.|
 |                      | Text Fields                    | SQL injection prevention           | Enter a common SQL injection string (e.g., ''; DROP TABLE users; --) in any text field | The form should escape or handle the input, preventing SQL execution, and display a validation error if necessary.  |
 
+## User Story Testing 
+
+### User Story:
+As a user, I want to be able to create an account so that I can manage my travel plans and profile information.
+
+Test Case: Account creation with valid data
+Steps:
+- Navigate to the registration page.
+- Fill in all required fields with valid information.
+- Submit the form.
+
+Expected Outcome: The account is created successfully, and the user is redirected to the profile or home page.
+
+### User Story:
+As a traveller, I want to be able to create a new trip with detailed information so that I can keep my travel plans organised.
+
+Test Case: Trip creation with valid data
+Steps:
+- Log in to the account.
+- Navigate to the "Create Trip" page.
+- Fill in all required trip details.
+- Submit the form.
+
+Expected Outcome: The trip is created successfully, and the user is redirected to the trip details page.
+
+### User Story:
+As a user, I want to view a list of my upcoming trips so that I can easily access and review my travel plans.
+
+Test Case: View trip list
+Steps:
+- Log in to the account.
+- Navigate to the "Trips" page.
+
+Expected Outcome: A list of upcoming trips is displayed.
+
+### User Story:
+As a traveller, I want to edit the details of my trips so that I can update my plans if anything changes.
+
+Test Case: Edit trip details
+Steps:
+- Log in to the account.
+- Navigate to the "Trips" page and select a trip.
+- Click on the "Edit Trip" button.
+- Update the trip details.
+- Submit the form.
+
+Expected Outcome: The trip details are updated successfully, and the user is redirected to the updated trip details page.
+
+### User Story:
+As a user, I want to delete a trip that I no longer plan to take so that my travel list remains current and relevant.
+
+Test Case: Delete a trip
+Steps:
+- Log in to the account.
+- Navigate to the "Trips" page and select a trip.
+- Click on the "Delete Trip" button.
+- Confirm the deletion.
+
+Expected Outcome: The trip is deleted successfully, and the user is redirected to the trips list page.
+
+### User Story:
+As a user, I want to create and update my profile with personal and travel-related information so that I can have all my details in one place.
+
+Test Case: Create and update profile
+Steps:
+- Log in to the account.
+- Navigate to the "Create Profile" page.
+- Fill in the profile information and submit.
+- Navigate to the "Update Profile" page.
+- Update the profile information and submit.
+
+Expected Outcome: The profile is created and updated successfully.
+
+### User Story:
+As a traveller, I want to view my profile information in a structured format so that I can quickly review and ensure my details are accurate.
+
+Test Case: View profile information
+Steps:
+- Log in to the account.
+- Navigate to the "Profile" page.
+
+Expected Outcome: Profile information is displayed in a structured format.
+
+### User Story:
+As a traveller, I want to search for specific trips based on destination or trip name so that I can quickly find the information I need.
+
+Test Case: Search trips
+Steps:
+- Log in to the account.
+- Use the search bar on the "Trips" page.
+- Enter a destination or trip name and submit.
+
+Expected Outcome: Trips matching the search criteria are displayed.
+
+### User Story:
+As a user, I want to receive confirmation messages when I create, update, or delete trips and profiles so that I know my actions were successful.
+
+Test Case: Confirmation messages
+Steps:
+- Perform actions such as creating, updating, or deleting a trip or profile.
+
+Expected Outcome: Confirmation messages are displayed after each action.
+
+### User Story:
+As a user, I want to confirm before logging out so that I do not accidentally end my session.
+
+Test Case: Confirm logout
+Steps:
+- Click on the "Logout" button.
+- Confirm the logout action in the modal.
+
+Expected Outcome: User is logged out after confirming the action.
+
+### User Story:
+As a traveller, I want to explore new travel destinations and see detailed information about each location so that I can plan future trips.
+
+Test Case: Explore travel destinations
+Steps:
+- Log in to the account.
+- Navigate to the home page or destinations page.
+
+Expected Outcome: Detailed information about various travel destinations is displayed.
+
 ## Deployment
 
 ### Connecting to Github 
