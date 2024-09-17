@@ -18,8 +18,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '8000-elmifarah1-farahtravels-r246anpbl28.ws-eu116.gitpod.io',
     '8000-elmifarah1-farahtravels-l9xrnkqc3j5.ws.codeinstitute-ide.net',
-    '.herokuapp.com'
+    '.herokuapp.com',
+    '.gitpod.io',
 ]
 
 # Application definition.
